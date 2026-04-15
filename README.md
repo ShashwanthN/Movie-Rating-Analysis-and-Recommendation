@@ -65,4 +65,4 @@ also I have only used 2 dimensions or attributes in this project
 
 **Query 4: trending movies**
 finds movies with recent watch activity (last 7 days) and shows average ratings.
-# Movie-Rating-Analysis-and-Recommendation
+
