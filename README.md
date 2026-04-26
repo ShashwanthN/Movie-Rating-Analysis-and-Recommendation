@@ -1,6 +1,6 @@
 # Movie Rating Analysis System
 
-This is my favorite project right now. hope I've explained why thought process toward building this system. Database project for implementing Problem Statement: Movie Recommendation and Rating Analysis System. Since i've designed a Movie recommendation system before, I've used it as a base. I have split the listed functions into 4 categories. 
+This is my favorite project right now. hope I've explained why thought process toward building this system. Database project for implementing Problem Statement: Movie Recommendation and Rating Analysis System. Since i've designed a Movie recommendation system before, I've used it as a base. I have split the listed functions into 3 categories. 
 
 Reason why I did this in the past is because I have always been recommend movies that I dislike. This is because the users are plotted together based on fewer parameters. 
 
@@ -38,6 +38,12 @@ schema.sql
 sample_data.sql
 0analysis_queries.sql
 
+### Database Schema Diagram
+
+![Movie Rating Schema](./movie_rating_schema.drawio.png)
+
+This ER-style diagram shows relationships between users, movies, ratings, and watch history.
+
 ## setup
 
 make sure you have sql installed
@@ -61,8 +67,13 @@ shows total watches,  viewers, and average completion time by genre.
 **Query 3: recommendations**
 combines rating pattern neighbors and genre affinity neighbors into one ranked recommendation list and shows which users were selected as neighbors for each recommendation dimension.
 
+![Recommendation Flow for Query 3](./recommendation_workflow.drawio.png)
+
 also I have only used 2 dimensions or attributes in this project
 
 **Query 4: trending movies**
 finds movies with recent watch activity (last 7 days) and shows average ratings.
 
+![Trending Movies Pipeline](./trending_movies_pipeline.drawio.png)
+
+This flow captures daily view aggregation, 7-day growth, and rating momentum checks used to compile trending titles.
